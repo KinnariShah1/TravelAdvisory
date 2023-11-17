@@ -23,16 +23,3 @@ export const getPlacesData = async (type, sw, ne) => {
     }
 }
 
-export const getWeatherData = async (lat, lng) => {
-    try {
-        const { data } = await axios.get('https://forecast9.p.rapidapi.com/rapidapi/forecast/${lat}/${lng}/hourly/',  
-        {headers: {
-            'X-RapidAPI-Key': 'feccb8ca16msh915773dcd972f73p183292jsn46cd60c88a84',
-            'X-RapidAPI-Host': 'forecast9.p.rapidapi.com'
-          }});
-
-          return data;
-    } catch (error) {
-        console.log(error);
-    }
-}
