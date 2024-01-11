@@ -95,14 +95,14 @@ const Register = ({ setShowRegister, setLoggedIn }) => {
         <b>TravelAdvisor</b>
       </div>
       <form onSubmit={handleSubmit}>
-        <input type="text" placeholder="username" ref={nameRef}></input>
-        <input type="email" placeholder="email" ref={emailRef}></input>
-        <input type="password" placeholder="password" ref={passwordRef}></input>
+        <input type="text" placeholder="username" ref={nameRef} className="username"></input>
+        <input type="email" placeholder="email" ref={emailRef} className="email"></input>
+        <input type="password" placeholder="password" ref={passwordRef} className="password"></input>
         <button type="submit" className="registerBtn">Register</button>
         {success && (
           <span className="success">Successfully registered. You can login now!</span>
         )}
-        {error && <span className="failure">Something went wrong!</span>}
+        {/* {error && <span className="failure">Something went wrong!</span>} */}
       </form>
       <Cancel className="registerCancel" onClick={() => setShowRegister(false)} />
     </div>

@@ -164,8 +164,8 @@ const handleSubmit = async (e) => {
         <b>TravelAdvisor</b>
       </div>
       <form onSubmit={handleSubmit}>
-        <input type="text" placeholder="username" ref={nameRef}></input>
-        <input type="password" placeholder="password" ref={passwordRef}></input>
+        <input type="text" placeholder="username" ref={nameRef} className="username"></input>
+        <input type="password" placeholder="password" ref={passwordRef} className="password"></input>
         <button type="submit" className="loginBtn">Login</button>
 
         {error && <span className="failure">Incorrect username or password</span>}

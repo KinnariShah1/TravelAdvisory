@@ -141,10 +141,13 @@ const Header = ({ setCoordinates, openLogin, openRegister, isLoggedIn, setIsLogg
       return (
         <>
         <Link to="/reviews" style={{color: "white"}}>
-          <Button color="inherit">Reviews</Button>
+          <Button color="inherit" className="reviews">Reviews</Button>
         </Link>
-          <Button color="inherit">Distance</Button>
-          <Button color="inherit" onClick={handleLogout}>
+        <Link to="/distance" style={{color: "white"}}>
+          <Button color="inherit" className="reviews">Distance</Button>
+        </Link>
+          {/* <Button color="inherit">Distance</Button> */}
+          <Button color="inherit" onClick={handleLogout} className="log">
             Logout
           </Button>
         </>
@@ -152,10 +155,10 @@ const Header = ({ setCoordinates, openLogin, openRegister, isLoggedIn, setIsLogg
     } else {
       return (
         <>
-          <Button color="inherit" onClick={openLogin}>
+          <Button color="inherit" onClick={openLogin} className="login">
             Login
           </Button>
-          <Button color="inherit" onClick={openRegister}>
+          <Button color="inherit" onClick={openRegister} className="register">
             Register
           </Button>
         </>

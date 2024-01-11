@@ -127,8 +127,9 @@ const App = () => {
         center={center}
         zoom={10}
         onDblClick = {handleAddClick}
+        className='google-map'
       >
-      console.log(currentUser);
+      {/* console.log(currentUser); */}
         {pins.map((pin) => (
           <Marker
             key={pin._id}
@@ -140,6 +141,7 @@ const App = () => {
               url: currentUser === pin.username ? "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTboz7NxDawVFV0CIO0wtT7RqClYLGBfZTwZg&usqp=CAU" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGS38s9KQC8RPmaYFMP6NxlhyoNIeviTBvSQ&usqp=CAU",
               scaledSize: new window.google.maps.Size(40, 40), // Adjust the size as needed
             }}
+            className="marker"
           >
 
           </Marker>
@@ -148,6 +150,7 @@ const App = () => {
           <InfoWindow
             position={{ lat: selectedPin.lat, lng: selectedPin.long }}
             onCloseClick={() => setSelectedPin(null)}
+            className="info"
           >
             <div className="card">
               <label>Place:</label>
@@ -175,12 +178,13 @@ const App = () => {
                 <label>Title</label>
                 <input 
                   placeholder='Enter a title' 
-                  onChange={(e) => setTitle(e.target.value)} 
+                  onChange={(e) => setTitle(e.target.value)}
+                  className='title' 
                 />
                 <label>Review</label>
-                <textarea placeholder='Say us something about this place' onChange={(e) => setDesc(e.target.value)}/>
+                <textarea placeholder='Say us something about this place' onChange={(e) => setDesc(e.target.value)} className='review'/>
                 <label>Rating</label>
-                <select onChange={(e) => setRating(e.target.value)}>
+                <select onChange={(e) => setRating(e.target.value)} className="star">
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>

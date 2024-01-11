@@ -22,10 +22,10 @@ const ReviewsHeader = () => {
         <Link to="/" style={{color: "white"}}>
           <Button color="inherit">Home</Button>
         </Link>
-        <Link to="/distance" style={{color: "white"}}>
-          <Button color="inherit">Distance</Button>
+        <Link to="/reviews" style={{color: "white"}}>
+          <Button color="inherit">Reviews</Button>
         </Link>
-          {/* <Button color="inherit">Distance</Button> */}
+          {/* <Button color="inherit">Reviews</Button> */}
           {/* <Button color="inherit" onClick={handleLogout}>
             Logout
           </Button> */}
